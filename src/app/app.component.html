@@ -1,31 +1,34 @@
-<div class="search-container">
-  <input type="text" class="search-input" placeholder="Enter City Name">
-  <button class="search-button">Search</button>
+<div class="search-container" [formGroup]="searchForm">
+  <input type="text" class="search-input" placeholder="Enter City Name" formControlName="city">
+  <button class="search-button" (click)="searchWeather()">Search</button>
 </div>
 
-<div class="content">
+<div class="content" *ngIf="weather">
   <div class="row">
     <div class="image-container">
       <img src="../assets/fair-weather.jpg" alt="Weather image">
     </div>
     <div class="temperature">
-      25°C
+      {{weather.current.temp_c}}°C
     </div>
   </div>
 
   <div class="row">
     <div class="more-info">
       <div class="info-box">
-        <p>Expected temperature: 28°C</p>
+        <p>Weather: {{weather.current.condition.text}}</p>
       </div>
       <div class="info-box">
-        <p>Humidity: 45%</p>
+        <p>Apparent temperature: {{weather.current.feelslike_c}}°C</p>
       </div>
       <div class="info-box">
-        <p>Wind speed: 4km/h</p>
+        <p>Humidity: {{weather.current.humidity}}%</p>
       </div>
       <div class="info-box">
-        <p>Pressure: 500 mmHg</p>
+        <p>Wind speed: {{weather.current.wind_kph}}km/h</p>
+      </div>
+      <div class="info-box">
+        <p>UV index: {{weather.current.uv}}</p>
       </div>
     </div>
   </div>
