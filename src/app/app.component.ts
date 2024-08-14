@@ -20,9 +20,7 @@ export class AppComponent {
   }
 
   searchWeather(){
-    console.log(this.searchForm.value);
     this.service.searchWeather(this.searchForm.get(['city'])!.value).subscribe((res) => {
-      console.log(res);
       this.weather = res;
     })
 
