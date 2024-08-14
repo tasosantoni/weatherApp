@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    NgOptimizedImage
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

@@ -1,15 +1,21 @@
+<div class="weather-app-title">
+  <p>Weather App</p>
+</div>
+
 <div class="search-container" [formGroup]="searchForm">
-  <input type="text" class="search-input" placeholder="Enter City Name" formControlName="city">
+  <input type="text" (keyup.enter)="searchWeather()" class="search-input" placeholder="Enter City Name" formControlName="city" autocomplete="disabled">
   <button class="search-button" (click)="searchWeather()">Search</button>
 </div>
 
 <div class="content" *ngIf="weather">
   <div class="row">
     <div class="image-container">
-      <img src="../assets/fair-weather.jpg" alt="Weather image">
+      <img src="../assets/cold.jpg" alt="Cold weather image" *ngIf="weather.current.temp_c < 10">
+      <img src="../assets/hot.jpg" alt="Hot weather image" *ngIf="weather.current.temp_c > 30">
+      <img src="../assets/fair.jpg" alt="Fair weather image" *ngIf="weather.current.temp_c >= 10 && weather.current.temp_c <= 30">
     </div>
     <div class="temperature">
-      {{weather.current.temp_c}}°C
+      {{weather.current.temp_c | number:'1.0-0'}}°C
     </div>
   </div>
 
@@ -19,7 +25,7 @@
         <p>Weather: {{weather.current.condition.text}}</p>
       </div>
       <div class="info-box">
-        <p>Apparent temperature: {{weather.current.feelslike_c}}°C</p>
+        <p>Apparent temperature: {{weather.current.feelslike_c | number:'1.0-0'}}°C</p>
       </div>
       <div class="info-box">
         <p>Humidity: {{weather.current.humidity}}%</p>
