@@ -7,7 +7,7 @@
   <button class="search-button" (click)="searchWeather()">Search</button>
 </div>
 
-<div class="content" *ngIf="weather">
+<div class="content">
   <div class="row">
     <div class="image-container">
       <img src="../assets/cold.jpg" alt="Cold weather image" *ngIf="weather.current.temp_c < 10">
