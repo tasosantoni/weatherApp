@@ -1,2 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-body { background-color: rgba(114, 189, 250, 0.986) !important; }
+body {
+    background-image: url(../src/assets/clouds-background.jpg);
+    background-size: fill;
+ }
