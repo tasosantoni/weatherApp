@@ -15,8 +15,11 @@ export class AppComponent {
 
   ngOnInit(){
     this.searchForm = this.fb.group({
-      city: [null,Validators.required]
+      city: ["thessaloniki",Validators.required]
     })
+
+    this.searchWeather();
+    this.searchForm.controls['city'].setValue(null);
   }
 
   searchWeather(){
