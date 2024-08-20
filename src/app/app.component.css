@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 27px;
+    font-size: 26px;
     color: white;
     font-weight: bold;
 }
@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 .search-input{
@@ -30,14 +31,8 @@
 }
 
 .content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 70%;
-    height: 50%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -81,7 +76,7 @@
 
 .info-box{
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
     color: rgb(75, 39, 39);
     font-weight: bold;
 }
