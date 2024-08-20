@@ -54,7 +54,7 @@
 
 .temperature{
     position: absolute;
-    transform: translate(142%, -405%);
+    transform: translate(151px, -235px);
     font-size: 50px;
     font-weight: bold;
     color: white;
