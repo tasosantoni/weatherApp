@@ -38,17 +38,15 @@
 }
 
 .row{
-    position: relative;
     flex: 1;
 }
 
 .image-container{
-    width: 100%;
-    height: 100%;
+    
 }
 
 .image-container img{
-    width: 600px;
+    width: 400px;
     height: 400px;
     object-fit: cover;
     border: 4px solid #0807077e;
@@ -56,12 +54,13 @@
 
 .temperature{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 70px;
+    transform: translate(142%, -405%);
+    font-size: 50px;
     font-weight: bold;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .more-info{
@@ -77,6 +76,6 @@
 .info-box{
     text-align: center;
     font-size: 20px;
-    color: rgb(75, 39, 39);
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
